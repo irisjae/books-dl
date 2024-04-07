@@ -1,5 +1,24 @@
 # BooksDL
 
+## For Mac Users
+
+```bash
+# install latest ruby binary
+brew install ruby
+
+# add binary path to $PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# install latest bundler
+gem install bundler
+
+# install gems
+bundle install
+
+# run entry file
+ruby main.rb
+```
+
 ## 使用說明
 請先至網站購買電子書，並詳見 main.rb 的使用方法。
 
