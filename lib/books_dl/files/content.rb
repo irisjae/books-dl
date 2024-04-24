@@ -3,7 +3,11 @@ module BooksDL
     class Content < ::BooksDL::BaseFile
       def file_paths
         doc.css('item').map do |item|
-          ::File.join(base_dir, item.attr('href')).to_s
+          if base_dir == '.'
+            item.attr('href').to_s
+          else
+            ::File.join(base_dir, item.attr('href')).to_s
+          end
         end
       end
 
